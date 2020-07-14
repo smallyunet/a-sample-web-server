@@ -4,7 +4,9 @@
 
 ### 使用
 
-程序使用 racket 開發。
+```
+racket server.rkt
+```
 
 ### 原因
 
