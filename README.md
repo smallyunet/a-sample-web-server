@@ -5,7 +5,7 @@
 ### 使用
 
 ```
-wget https://github.com/smallyunet/a-sample-web-server/releases/download/v0.0.2/server.tgz
+wget https://github.com/smallyunet/a-sample-web-server/releases/download/v0.0.3/server.tgz
 tar -zxvf server.tgz && cd server
 bin/server
 ```
