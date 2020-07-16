@@ -6,7 +6,7 @@
 (require racket/cmdline)
 
 
-(define port (make-parameter #false))
+(define port (make-parameter #true))
 
 (define (start req)
   (response/xexpr
@@ -30,5 +30,6 @@
                #:port (string->number (port-handler (port)))
                #:extra-files-paths
                (list (build-path "./"))
+               #:listen-ip #f
                #:command-line? #f)
 
