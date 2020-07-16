@@ -4,11 +4,12 @@
 
 ### 直接使用
 
-在 release 下载程序包，解压后运行 bin/server。
+在 Releases 下载可执行程序包，解压后运行 bin/server。
 
 ### 参数
 
-- -h 查看帮助
+- --help 查看帮助
+- --port 指定端口
 
 ### 项目意图
 

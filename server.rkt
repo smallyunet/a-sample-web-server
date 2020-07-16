@@ -17,7 +17,7 @@
   (command-line
    #:usage-help "hello"
    #:once-each
-   [("-p" "--port") PORT "Set port" (port PORT)]
+   [("--port" "-p") PORT "Set port" (port PORT)]
    #:args () (void)))
 
 (define (port-handler p)
