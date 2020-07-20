@@ -25,11 +25,12 @@
     [(boolean? p) "8000"]
     [(string? p) (string-append p)]))
 
+(printf "Your web application is running at http://localhost:~a/hello \n" (port-handler (port)))
 
 (serve/servlet start
                #:port (string->number (port-handler (port)))
                #:extra-files-paths
                (list (build-path "./"))
                #:listen-ip #f
-               #:command-line? #f)
-
+               #:servlet-path "/hello"
+               #:command-line? #t)
