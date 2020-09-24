@@ -2,8 +2,8 @@
 
 (require web-server/servlet
          web-server/servlet-env)
-
 (require racket/cmdline)
+(require hostname)
 
 
 (define port (make-parameter #true))
@@ -22,10 +22,13 @@
 
 (define (port-handler p)
   (cond
-    [(boolean? p) "8000"]
+    [(boolean? p) "20200"]
     [(string? p) (string-append p)]))
 
-(printf "Your web application is running at http://localhost:~a/hello \n" (port-handler (port)))
+(define (getIpAddr)
+  (car (get-ipv4-addrs)))
+
+(printf "Your web application is running at http://~a:~a/hello \n" (getIpAddr) (port-handler (port)))
 
 (serve/servlet start
                #:port (string->number (port-handler (port)))

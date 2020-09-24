@@ -1,5 +1,4 @@
 *.rkt~
 server/
 *.tgz
-test.html
-test.sh
+test.*
