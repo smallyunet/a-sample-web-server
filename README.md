@@ -5,9 +5,9 @@
 ### 使用
 
 ```
-wget https://github.com/smallyunet/a-sample-web-server/releases/download/v0.0.5/server.tgz
-tar -zxvf server.tgz && cd server
-bin/server
+wget https://github.com/smallyunet/a-sample-web-server/releases/download/v0.0.6/server.tar.gz
+tar -zxvf server.tar.gz
+./server
 ```
 
 或者自行从 Releases 页面下载程序包，解压后运行。
@@ -16,6 +16,15 @@ bin/server
 
 - `--help` 查看帮助
 - `--port` 指定端口
+
+### 示例
+
+```
+[mpsp@tcm99 a-sample-server]$ ./server -p 20201                                                                       
+Your web application is running at http://10.10.144.99:20201/hello 
+Your web application is running at http://127.0.0.1:20201/hello 
+Your web application is running at http://192.168.122.1:20201/hello 
+```
 
 ### 动机
 

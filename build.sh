@@ -1,0 +1,1 @@
+raco exe --orig-exe server.rkt

@@ -2,3 +2,5 @@
 server/
 *.tgz
 test.*
+server
+*.tar.gz

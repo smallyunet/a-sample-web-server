@@ -8,11 +8,6 @@
 
 (define port (make-parameter #true))
 
-(define (start req)
-  (response/xexpr
-   `(html (head (title "Hello world!"))
-          (body (p "Hey out there!")))))
-
 (define parser
   (command-line
    #:usage-help "hello"
@@ -25,10 +20,19 @@
     [(boolean? p) "20200"]
     [(string? p) (string-append p)]))
 
-(define (getIpAddr)
-  (car (get-ipv4-addrs)))
 
-(printf "Your web application is running at http://~a:~a/hello \n" (getIpAddr) (port-handler (port)))
+(define (printIpAddr)
+  (define ips (get-ipv4-addrs #:localhost? #t))
+  (for ([ip ips])
+    (printf "Your web application is running at http://~a:~a/hello \n" ip (port-handler (port)))))
+
+(printIpAddr)
+
+
+(define (start req)
+  (response/xexpr
+   `(html (head (title "Hello world!"))
+          (body (p "Hey out there!")))))
 
 (serve/servlet start
                #:port (string->number (port-handler (port)))
