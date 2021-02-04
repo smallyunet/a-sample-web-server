@@ -20,8 +20,7 @@ tar -zxvf server.tar.gz
 ### 示例
 
 ```
-[test@test a-sample-server]$ ./server/bin/server 
- -p 20201                                                                       
+[test@test a-sample-server]$ ./server/bin/server -p 20201                                                                       
 Your web application is running at http://10.10.144.99:20201/hello 
 Your web application is running at http://127.0.0.1:20201/hello 
 Your web application is running at http://192.168.122.1:20201/hello 
