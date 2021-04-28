@@ -10,7 +10,7 @@
 
 (define parser
   (command-line
-   #:usage-help "hello"
+   #:usage-help "V0.0.7"
    #:once-each
    [("--port" "-p") PORT "Set port" (port PORT)]
    #:args () (void)))
