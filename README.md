@@ -1,3 +1,5 @@
+> 仅支持 Linux 系统
+
 ### 描述
 
 一个简单的 web 服务器，默认占用 20200 端口，程序启动目录为静态资源的目录。
@@ -7,7 +9,7 @@
 ```
 wget https://github.com/smallyunet/a-sample-web-server/releases/download/v0.0.7/server.tar.gz
 tar -zxvf server.tar.gz
-./server
+./server/server
 ```
 
 或者从 [Releases](https://github.com/smallyunet/a-sample-web-server/releases) 页面下载程序包，解压后运行。
