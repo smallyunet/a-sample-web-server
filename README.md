@@ -6,7 +6,7 @@
 
 ```
 wget https://github.com/smallyunet/a-sample-web-server/releases/download/v0.0.7/server-linux.tar.gz
-tar -zxvf server.tar.gz
+tar -zxvf server-linux.tar.gz
 ./server/server
 ```
 
