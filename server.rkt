@@ -17,8 +17,12 @@
 
 (define (port-handler p)
   (cond
-    [(boolean? p) "20200"]
-    [(string? p) (string-append p)]))
+    [(boolean? p) 20200]
+    [(string? p)
+     (define n (string->number p))
+     (if (and n (exact-integer? n) (<= 0 n) (<= n 65535))
+         n
+         (error 'port "invalid port number ~a" p))]))
 
 
 (define (printIpAddr)
@@ -35,7 +39,7 @@
           (body (p "Hey out there!")))))
 
 (serve/servlet start
-               #:port (string->number (port-handler (port)))
+               #:port (port-handler (port))
                #:extra-files-paths
                (list (build-path "./"))
                #:listen-ip #f
